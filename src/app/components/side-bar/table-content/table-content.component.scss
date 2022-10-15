@@ -1,0 +1,12 @@
+.cliquable {
+    cursor: pointer;
+}
+
+.active {
+    font-weight: bold;
+    color: darkorange;
+}
+
+.not-active:hover {
+    color: var(--tab-color-hover);
+}

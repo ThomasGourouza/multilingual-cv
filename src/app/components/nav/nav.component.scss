@@ -3,6 +3,10 @@
     cursor: pointer;
 }
 
+.active {
+    color: darkorange;
+}
+
 .not-active:hover {
     color: var(--tab-color-hover);
 }
@@ -48,8 +52,4 @@
     width: 30px;
     height: 30px;
     cursor: pointer;
-}
-
-.active {
-    color: darkorange;
 }

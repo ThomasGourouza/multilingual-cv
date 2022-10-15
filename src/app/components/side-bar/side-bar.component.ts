@@ -14,116 +14,61 @@ export class SideBarComponent implements OnInit {
     this.tableOfContents = [
       {
         title: 'home',
+        url: ['home'],
         items: [
-          'introduction'
+          {
+            title: 'introduction',
+            url: ['home', 'introduction'],
+            items: []
+          }
         ]
       },
       {
         title: 'academic',
+        url: ['academic'],
         items: [
           {
             title: 'primarySchool',
+            url: ['academic', 'primarySchool'],
             items: [
-              'school1',
-              'school2',
-              'school3',
+              {
+                title: 'truc',
+                url: ['academic', 'primarySchool', 'truc'],
+                items: [
+                  {
+                    title: 'tric',
+                    url: ['academic', 'primarySchool', 'truc', 'tric'],
+                    items: []
+                  },
+                  {
+                    title: 'troc',
+                    url: ['academic', 'primarySchool', 'truc', 'troc'],
+                    items: []
+                  }
+                ]
+              },
+              {
+                title: 'trac',
+                url: ['academic', 'primarySchool', 'trac'],
+                items: []
+              }
             ]
           },
           {
             title: 'highSchool',
-            items: [
-              'first',
-              {
-                title: 'second',
-                items: [
-                  'school1',
-                  'school2',
-                  'school3',
-                ]
-              }
-            ]
+            url: ['academic', 'highSchool'],
+            items: []
           }
         ]
       },
       {
         title: 'experiences',
-        items: [
-          'firstOne',
-          {
-            title: 'secondOne',
-            items: [
-              'this',
-              'that'
-            ]
-          }
-        ]
-      },
-      {
-        title: 'hobbies',
-        items: [
-          'hobby1',
-          'kenobi'
-        ]
-      },
-      {
-        title: 'test',
+        url: ['experiences'],
         items: []
       },
       {
-        title: 'home',
-        items: [
-          'introduction'
-        ]
-      },
-      {
-        title: 'academic',
-        items: [
-          {
-            title: 'primarySchool',
-            items: [
-              'school1',
-              'school2',
-              'school3',
-            ]
-          },
-          {
-            title: 'highSchool',
-            items: [
-              'first',
-              {
-                title: 'second',
-                items: [
-                  'school1',
-                  'school2',
-                  'school3',
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        title: 'experiences',
-        items: [
-          'firstOne',
-          {
-            title: 'secondOne',
-            items: [
-              'this',
-              'that'
-            ]
-          }
-        ]
-      },
-      {
-        title: 'hobbies',
-        items: [
-          'hobby1',
-          'kenobi'
-        ]
-      },
-      {
-        title: 'test',
+        title: 'interests',
+        url: ['interests'],
         items: []
       }
     ];

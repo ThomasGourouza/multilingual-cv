@@ -1,7 +1,10 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { NavigationService } from 'src/app/services/navigation.service';
 export interface Content {
   title: string;
-  items: (string | Content)[];
+  url: string[],
+  items: Content[];
 }
 
 @Component({
@@ -11,14 +14,22 @@ export interface Content {
 })
 export class TableContentComponent implements OnInit {
 
-  @Input() tableOfContent!: any;
+  @Input() tableOfContent!: Content;
+  public activeTab: string | undefined;
 
-  constructor() { }
+  constructor(
+    private navigationService: NavigationService,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
+    this.navigationService.activeTab$.subscribe((tab) =>
+      this.activeTab = tab
+    );
   }
 
-  public isString(item: string | Content): boolean {
-    return typeof item === 'string';
+  public onContentClick(url: string[]): void {
+    this.router.navigate(url);
   }
+
 }

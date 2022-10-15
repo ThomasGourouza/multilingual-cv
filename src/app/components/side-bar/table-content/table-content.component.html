@@ -1,11 +1,16 @@
 <ul>
-    <li *ngIf="isString(tableOfContent); else content">
-        {{ tableOfContent }}
+    <li>
+        <span [ngClass]="{
+                        'cliquable': true,
+                        'active': tableOfContent.title === activeTab,
+                        'not-active': tableOfContent.title !== activeTab
+                        }"
+               (click)="onContentClick(tableOfContent.url)"
+        >
+            {{ "navigation." + tableOfContent.title | translate }}
+        </span>
     </li>
-    <ng-template #content>
-        <li>{{ tableOfContent.title }}</li>
-        <div *ngFor="let content of tableOfContent.items">
-            <app-table-content [tableOfContent]="content"></app-table-content>
-        </div>
-    </ng-template>
+    <div *ngFor="let content of tableOfContent.items">
+        <app-table-content [tableOfContent]="content"></app-table-content>
+    </div>
 </ul>
