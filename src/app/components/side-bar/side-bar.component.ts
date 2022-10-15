@@ -26,40 +26,7 @@ export class SideBarComponent implements OnInit {
       {
         title: 'academic',
         url: ['academic'],
-        items: [
-          {
-            title: 'primarySchool',
-            url: ['academic', 'primarySchool'],
-            items: [
-              {
-                title: 'truc',
-                url: ['academic', 'primarySchool', 'truc'],
-                items: [
-                  {
-                    title: 'tric',
-                    url: ['academic', 'primarySchool', 'truc', 'tric'],
-                    items: []
-                  },
-                  {
-                    title: 'troc',
-                    url: ['academic', 'primarySchool', 'truc', 'troc'],
-                    items: []
-                  }
-                ]
-              },
-              {
-                title: 'trac',
-                url: ['academic', 'primarySchool', 'trac'],
-                items: []
-              }
-            ]
-          },
-          {
-            title: 'highSchool',
-            url: ['academic', 'highSchool'],
-            items: []
-          }
-        ]
+        items: []
       },
       {
         title: 'experiences',

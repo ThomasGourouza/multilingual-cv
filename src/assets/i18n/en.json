@@ -12,6 +12,7 @@
     "language-select": "Select a language: ",
     "navigation": {
         "home": "Home",
+        "introduction": "Introduction",
         "academic": "School",
         "experiences": "Experiences",
         "interests": "Hobbies"
