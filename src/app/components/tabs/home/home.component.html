@@ -1,0 +1,9 @@
+<div class="d-flex justify-content-center">
+  <h1>{{ "demo.text" | translate }}</h1>
+</div>
+
+<p>{{ "demo.title" | translate }}</p>
+<p>{{ "demo.greeting" | translate: { "name": name } }}</p>
+<p [innerHTML]="'demo.paragraph' | translate"></p>
+<p>{{"icu.pluralization" | translate: { "count": 1 } }}</p>
+<p>{{"icu.select" | translate: { "gender": "male", "product": "BabelEdit" } }}</p>

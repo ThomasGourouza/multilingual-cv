@@ -1,0 +1,14 @@
+<div class="box">
+    <div class="logo-box d-flex justify-content-start align-items-center">
+        <div class="logo"></div>
+    </div>
+    <div class="tabs-box d-flex align-items-center">
+        <div *ngFor="let tab of tabs" class="tab">
+            <span class="cliquable" (click)="onTabClick(tab)">{{ "navigation." + tab | translate }}</span>
+        </div>
+    </div>
+    <div class="settings-box d-flex justify-content-end align-items-center">
+        <app-language-select></app-language-select>
+    </div>
+  </div>
+  

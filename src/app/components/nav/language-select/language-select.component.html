@@ -1,0 +1,7 @@
+<select [ngModel]="selectedLanguage" (ngModelChange)="onChangeLanguage($event)">
+    <option *ngFor="let language of languages"
+        [value]="language"
+    >
+        {{ language | language }}
+    </option>
+</select>

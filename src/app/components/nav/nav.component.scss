@@ -1,0 +1,42 @@
+.cliquable {
+    font-weight: bold;
+}
+
+.cliquable:hover {
+    color: var(--tab-color-hover);
+    cursor: pointer;
+}
+
+.box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.logo-box {
+    width: var(--logo-box-size);
+    height: 100%;
+}
+
+.tabs-box {
+    width: var(--tabs-box-size);
+    height: 100%;
+}
+
+.tab {
+    margin-left: var(--tab-margin);
+    margin-right: var(--tab-margin);
+}
+
+.settings-box {
+    width: var(--settings-box-size);
+    height: 100%;
+}
+
+.logo {
+    background-color: blue;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}

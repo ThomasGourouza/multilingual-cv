@@ -1,0 +1,13 @@
+<div class="header custom-row">
+    <app-nav></app-nav>
+</div>
+<div class="body custom-row">
+    <div [ngClass]="{'side-bar': true, 'toggle-open': sideBarOpen, 'toggle-closed': !sideBarOpen}">
+        <app-side-bar [sideBarOpen]="sideBarOpen"
+                      (sideBarToggle)="onSideBarToggle($event)">
+        </app-side-bar>
+    </div>
+    <div [ngClass]="{'content scroll-y': true, 'narrow': sideBarOpen, 'wide': !sideBarOpen}">
+        <router-outlet></router-outlet>
+    </div>
+</div>
