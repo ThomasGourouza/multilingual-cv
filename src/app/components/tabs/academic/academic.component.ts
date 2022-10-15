@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavigationService } from 'src/app/services/navigation.service';
 
 @Component({
   selector: 'app-academic',
@@ -9,12 +10,16 @@ export class AcademicComponent implements OnInit {
 
   tests: number[] = [];
 
-  constructor() { 
+  constructor(
+    private navigationService: NavigationService
+  ) { 
     for (let i = 1; i <= 200; i++) {
       this.tests.push(i);
     }
   }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    this.navigationService.setActiveTab('academic');
+  }
 
 }

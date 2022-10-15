@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
+import { NavigationService } from 'src/app/services/navigation.service';
 
 @Component({
   selector: 'app-nav',
@@ -8,17 +9,30 @@ import { Router } from '@angular/router';
 })
 export class NavComponent implements OnInit {
 
+  @Input() toggleSideBar!: boolean;
+  @Output() onSideBarToggle = new EventEmitter<boolean>();
+
   public tabs = ['home', 'academic', 'experiences', 'interests'];
+  public activeTab: string | undefined;
 
   constructor(
-    private router: Router
+    private router: Router,
+    private navigationService: NavigationService
   ) { }
 
   ngOnInit(): void {
+    this.navigationService.activeTab$.subscribe((tab) =>
+      this.activeTab = tab
+    );
   }
 
-  onTabClick(tab: string): void {
+  onChangeTab(tab: string): void {
     this.router.navigate([tab]);
+  }
+
+  onToggle(): void {
+    this.toggleSideBar = !this.toggleSideBar;
+    this.onSideBarToggle.emit(this.toggleSideBar);
   }
 
 }

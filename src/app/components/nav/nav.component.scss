@@ -1,10 +1,10 @@
 .cliquable {
     font-weight: bold;
+    cursor: pointer;
 }
 
-.cliquable:hover {
+.not-active:hover {
     color: var(--tab-color-hover);
-    cursor: pointer;
 }
 
 .box {
@@ -20,6 +20,7 @@
 }
 
 .tabs-box {
+    padding-left: var(--tabs-box-padding-left);
     width: var(--tabs-box-size);
     height: 100%;
 }
@@ -39,4 +40,16 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
+    cursor: pointer;
+}
+
+.menu {
+    background-color: gray;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.active {
+    color: darkorange;
 }

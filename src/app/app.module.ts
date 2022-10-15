@@ -20,6 +20,8 @@ import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { AcademicComponent } from './components/tabs/academic/academic.component';
 import { InterestsComponent } from './components/tabs/interests/interests.component';
 import { ExperiencesComponent } from './components/tabs/experiences/experiences.component';
+import { NavigationService } from './services/navigation.service';
+import { TableContentComponent } from './components/side-bar/table-content/table-content.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,8 @@ import { ExperiencesComponent } from './components/tabs/experiences/experiences.
     SideBarComponent,
     AcademicComponent,
     InterestsComponent,
-    ExperiencesComponent
+    ExperiencesComponent,
+    TableContentComponent
   ],
   imports: [
     CommonModule,
@@ -53,7 +56,7 @@ import { ExperiencesComponent } from './components/tabs/experiences/experiences.
     }),
     RouterModule.forRoot(APP_ROUTES)
   ],
-  providers: [],
+  providers: [NavigationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

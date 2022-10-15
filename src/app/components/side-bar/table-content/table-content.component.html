@@ -1,0 +1,11 @@
+<ul>
+    <li *ngIf="isString(tableOfContent); else content">
+        {{ tableOfContent }}
+    </li>
+    <ng-template #content>
+        <li>{{ tableOfContent.title }}</li>
+        <div *ngFor="let content of tableOfContent.items">
+            <app-table-content [tableOfContent]="content"></app-table-content>
+        </div>
+    </ng-template>
+</ul>

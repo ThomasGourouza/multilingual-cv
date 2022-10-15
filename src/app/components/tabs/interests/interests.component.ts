@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavigationService } from 'src/app/services/navigation.service';
 
 @Component({
   selector: 'app-interests',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InterestsComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private navigationService: NavigationService
+  ) { }
 
   ngOnInit(): void {
+    this.navigationService.setActiveTab('interests');
   }
 
 }

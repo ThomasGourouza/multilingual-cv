@@ -1,15 +1,4 @@
-.toggle {
-    height: 100%;
-    padding-right: var(--side-bar-toggle-padding);
-    padding-bottom: var(--side-bar-toggle-padding);
-}
-
-.toggle-button {
-    font-size: xx-large;
-    font-weight: bolder;
-    cursor: pointer;
-}
-
-.toggle-button:hover {
-    color: red;
+.marge {
+    padding-top: var(--nav-bar-padding);
+    padding-left: var(--nav-bar-padding);
 }

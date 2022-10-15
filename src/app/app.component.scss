@@ -14,10 +14,6 @@
     bottom: 0;
 }
 
-.scroll-y {
-    overflow-y: auto;
-}
-
 .header.custom-row {
     height: var(--nav-bar-size);
     top: 0;
@@ -38,6 +34,7 @@
     height: 100%;
     transition: width var(--transition-time);
     background-color: var(--side-bar-color);
+    overflow-y: auto;
 }
 
 .side-bar.toggle-open {
@@ -54,6 +51,7 @@
     border-left: var(--border);
     border-color: var(--border-color);
     padding-top: var(--content-padding-top);
+    overflow-y: auto;
     transition: width var(--transition-time),
                 margin-left var(--transition-time),
                 padding-left var(--transition-time),

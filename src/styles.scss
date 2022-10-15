@@ -1,21 +1,27 @@
 :root {
-    --nav-bar-size: 70px;
-    --transition-time: 500ms;
+    --border: solid 1px;
     --border-color: rgb(120, 120, 120);
+    --transition-time: 300ms;
+
+    --nav-bar-size: 70px;
+    --nav-bar-padding: 25px;
+    --nav-bar-color: rgb(255, 228, 196);
+    
+    --logo-box-size: 120px;
+
+    --tabs-box-size: calc(100% - (var(--logo-box-size) + var(--settings-box-size)));
+    --tabs-box-padding-left: 50px;
+    --tab-margin: 20px;
     --tab-color: rgb(0, 0, 0);
     --tab-color-hover: rgb(120, 120, 120);
     --tab-color-selected: rgb(192, 64, 32);
-    --border: solid 1px;
-    --nav-bar-padding: 50px;
-    --nav-bar-color: rgb(255, 228, 196);
-    --logo-box-size: 100px;
+
     --settings-box-size: 200px;
-    --tabs-box-size: calc(100% - (var(--logo-box-size) + var(--settings-box-size)));
-    --tab-margin: 20px;
-    --side-bar-size-min: 75px;
+
     --side-bar-color: rgb(250, 252, 130);
-    --side-bar-size-max: 275px;
-    --side-bar-toggle-padding: 20px;
+    --side-bar-size-min: 0px;
+    --side-bar-size-max: 300px;
+
     --content-padding-top: 20px;
     --content-padding-min: 2%;
     --content-padding-max: 5%;

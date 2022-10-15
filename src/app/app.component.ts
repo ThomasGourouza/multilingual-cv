@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -6,14 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
 
-  public sideBarOpen = true;
+  public toggleSideBar: boolean = true;
 
-  constructor() { }
+  constructor(
+    private translate: TranslateService
+  ) {
+    this.translate.setDefaultLang('en');
+    this.translate.use(translate.getBrowserLang() || 'en');
+  }
 
   ngOnInit(): void { }
 
-  onSideBarToggle(isOpen: boolean): void {
-    this.sideBarOpen = isOpen;
+  public onSideBarToggle(toggleSideBar: boolean): void {
+    this.toggleSideBar = toggleSideBar;
   }
 
 }

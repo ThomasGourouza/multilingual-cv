@@ -1,3 +1,5 @@
-<div class="toggle d-flex justify-content-end align-items-end">
-    <div class="toggle-button" (click)="onsideBarToggle()">{{ sideBarOpen ? "\<" : "\>" }}</div>
+<div class="marge">
+    <div *ngFor="let content of tableOfContents">
+        <app-table-content [tableOfContent]="content"></app-table-content>
+    </div>
 </div>
