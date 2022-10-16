@@ -10,6 +10,10 @@ export const APP_ROUTES: Routes = [
         component: HomeComponent
     },
     {
+        path: 'home/introduction',
+        component: HomeComponent
+    },
+    {
         path: 'academic',
         component: AcademicComponent
     },

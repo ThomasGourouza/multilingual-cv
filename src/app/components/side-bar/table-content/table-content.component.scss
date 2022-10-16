@@ -4,9 +4,14 @@
 
 .active {
     font-weight: bold;
-    color: darkorange;
+    color: var(--active-tab-color);
 }
 
 .not-active:hover {
     color: var(--tab-color-hover);
+}
+
+.active-sub-tab {
+    font-weight: bold;
+    color: var(--active-sub-tab-color);
 }

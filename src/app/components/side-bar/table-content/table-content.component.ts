@@ -15,6 +15,7 @@ export interface Content {
 export class TableContentComponent implements OnInit {
 
   @Input() tableOfContent!: Content;
+  public subTab!: string[];
   public activeTab: string | undefined;
 
   constructor(
@@ -26,10 +27,17 @@ export class TableContentComponent implements OnInit {
     this.navigationService.activeTab$.subscribe((tab) =>
       this.activeTab = tab
     );
+    this.navigationService.activeSubTab$.subscribe((subTab) =>
+      this.subTab = subTab
+    );
   }
 
   public onContentClick(url: string[]): void {
     this.router.navigate(url);
+  }
+
+  public arrayEquals(array1: string[], array2: string[]): boolean {
+    return array1.join('/') === array2.join('/');
   }
 
 }

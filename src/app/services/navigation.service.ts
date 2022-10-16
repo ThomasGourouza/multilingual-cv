@@ -7,13 +7,23 @@ import { BehaviorSubject, Observable } from 'rxjs';
 export class NavigationService {
 
   private _activeTab$ = new BehaviorSubject<string>('');
+  private _activeSubTab$ = new BehaviorSubject<string[]>([]);
 
   get activeTab$(): Observable<string> {
     return this._activeTab$.asObservable();
   }
 
-  public setActiveTab(tab: string): void {
-    this._activeTab$.next(tab);
+  get activeSubTab$(): Observable<string[]> {
+    return this._activeSubTab$.asObservable();
+  }
+
+  public setActiveTabs(subTab: string): void {
+    const url = subTab.split('/');
+    url.shift();
+    if(url.length > 0) {
+      this._activeTab$.next(url[0]);
+      this._activeSubTab$.next(url);
+    }
   }
 
 }

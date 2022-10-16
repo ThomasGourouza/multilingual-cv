@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { NavigationService } from 'src/app/services/navigation.service';
 
 @Component({
@@ -9,11 +10,12 @@ import { NavigationService } from 'src/app/services/navigation.service';
 export class ExperiencesComponent implements OnInit {
 
   constructor(
-    private navigationService: NavigationService
+    private navigationService: NavigationService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
-    this.navigationService.setActiveTab('experiences');
+    this.navigationService.setActiveTabs(this.router.url);
   }
 
 }

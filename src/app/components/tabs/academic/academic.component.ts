@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { NavigationService } from 'src/app/services/navigation.service';
 
 @Component({
@@ -11,7 +12,8 @@ export class AcademicComponent implements OnInit {
   tests: number[] = [];
 
   constructor(
-    private navigationService: NavigationService
+    private navigationService: NavigationService,
+    private router: Router
   ) { 
     for (let i = 1; i <= 200; i++) {
       this.tests.push(i);
@@ -19,7 +21,6 @@ export class AcademicComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.navigationService.setActiveTab('academic');
+    this.navigationService.setActiveTabs(this.router.url);
   }
-
 }
