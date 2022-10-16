@@ -16,7 +16,6 @@ export class TableContentComponent implements OnInit {
 
   @Input() tableOfContent!: Content;
   public subTab!: string[];
-  public activeTab: string | undefined;
 
   constructor(
     private navigationService: NavigationService,
@@ -24,10 +23,9 @@ export class TableContentComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.navigationService.activeTabs$.subscribe((tabs) => {
-      this.activeTab = tabs[0];
-      this.subTab = tabs;
-    });
+    this.navigationService.activeTabs$.subscribe((tabs) =>
+      this.subTab = tabs
+    );
   }
 
   public onContentClick(url: string[]): void {

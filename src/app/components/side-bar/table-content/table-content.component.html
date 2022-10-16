@@ -2,9 +2,9 @@
     <li>
         <span [ngClass]="{
                         'cliquable': true,
-                        'active': tableOfContent.title === activeTab,
-                        'not-active': (tableOfContent.title !== activeTab) && !arrayEquals(subTab, tableOfContent.url),
-                        'active-sub-tab': (tableOfContent.title !== activeTab) && arrayEquals(subTab, tableOfContent.url)
+                        'active': tableOfContent.title === subTab[0],
+                        'not-active': (tableOfContent.title !== subTab[0]) && !arrayEquals(subTab, tableOfContent.url),
+                        'active-sub-tab': (tableOfContent.title !== subTab[0]) && arrayEquals(subTab, tableOfContent.url)
                         }"
                (click)="onContentClick(tableOfContent.url)"
         >
