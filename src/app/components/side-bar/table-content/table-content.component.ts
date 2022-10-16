@@ -24,12 +24,10 @@ export class TableContentComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.navigationService.activeTab$.subscribe((tab) =>
-      this.activeTab = tab
-    );
-    this.navigationService.activeSubTab$.subscribe((subTab) =>
-      this.subTab = subTab
-    );
+    this.navigationService.activeTabs$.subscribe((tabs) => {
+      this.activeTab = tabs[0];
+      this.subTab = tabs;
+    });
   }
 
   public onContentClick(url: string[]): void {

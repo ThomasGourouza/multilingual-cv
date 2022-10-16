@@ -21,8 +21,8 @@ export class NavComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.navigationService.activeTab$.subscribe((tab) =>
-      this.activeTab = tab
+    this.navigationService.activeTabs$.subscribe((tabs) =>
+      this.activeTab = tabs[0]
     );
   }
 
