@@ -57,5 +57,5 @@ jobs:
           password: ${{ secrets.ftp_password }}
           port: 21
           protocol: ftp
-          local-dir: ./dist/
+          local-dir: ./dist/multilingual-cv/
           server-dir: ./www/
