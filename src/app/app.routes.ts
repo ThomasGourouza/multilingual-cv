@@ -29,6 +29,11 @@ export const APP_ROUTES: Routes = [
         path: 'article/:id',
         component: HomeComponent
     },
+    { 
+        path: 'interests/projects/',
+        redirectTo: 'interests',
+        pathMatch: 'full'
+    },
     { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: '**', redirectTo: 'home', pathMatch: 'full' },
 ];
